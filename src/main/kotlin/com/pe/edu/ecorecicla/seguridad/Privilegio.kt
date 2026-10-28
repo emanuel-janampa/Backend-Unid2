@@ -1,0 +1,19 @@
+package com.pe.edu.ecorecicla.seguridad
+
+import jakarta.persistence.Column
+import jakarta.persistence.Entity
+import jakarta.persistence.GeneratedValue
+import jakarta.persistence.GenerationType
+import jakarta.persistence.Id
+import jakarta.persistence.Table
+
+@Entity
+@Table(name = "privilegios")
+class Privilegio(
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    var id: Long? = null,
+
+    @Column(nullable = false, unique = true, length = 60)
+    var nombre: String = ""
+)
